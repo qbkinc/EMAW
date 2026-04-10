@@ -4,10 +4,10 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, L
 // ─── GOOGLE DRIVE CONFIG ─────────────────────────────────────────────────────
 // Fill these in before deploying. The redirect URI must match exactly what's
 // registered in your Google Cloud OAuth 2.0 client settings.
-const GDRIVE_CLIENT_ID      = "YOUR_CLIENT_ID.apps.googleusercontent.com";
-const GDRIVE_CLIENT_SECRET  = "YOUR_CLIENT_SECRET";
-const GDRIVE_REDIRECT_URI   = "https://qbkinc.github.io/EMAW/index.html";
-const GDRIVE_SHARED_REFRESH_TOKEN = "YOUR_SHARED_REFRESH_TOKEN";
+const GDRIVE_CLIENT_ID           = 544563624941-l52hjuuh8ovmuc3an7umdhkbk3g9urlr.apps.googleusercontent.com";
+const GDRIVE_CLIENT_SECRET       = "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";
+const GDRIVE_REDIRECT_URI        = "https://qbkinc.github.io/EMAW/index.html";
+const GDRIVE_SHARED_REFRESH_TOKEN = "1//055kID1nC07riCgYIARAAGAUSNwF-L9IrZROtwGfBeGHZkDG3qUsUIt1GvIA_8m30uj73zAN20yIrv49fFN0kEzPAKjt6X9thrIU";
 
 const GDRIVE_FILE_NAME = "emaw_data_backup.json";
 const GDRIVE_SCOPES    = "https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/drive.file";
