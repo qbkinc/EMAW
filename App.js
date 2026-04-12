@@ -2283,16 +2283,15 @@ function MainApp({ currentUser, setCurrentUser, appUsers, setAppUsers, roles, se
                 + Attendance
               </button>
             )}
-            {/* Google Drive status button */}
-            <button onClick={() => { setGdriveModal(true); setGdriveSyncMsg(""); }}
-              title="Google Drive Sync"
-              style={{ background: gdriveConnected ? "rgba(16,185,129,0.15)" : "rgba(255,255,255,0.07)", border: `1px solid ${gdriveConnected ? "rgba(16,185,129,0.35)" : "rgba(255,255,255,0.12)"}`, color: gdriveConnected ? "#10b981" : "#64748b", padding: "4px 8px", borderRadius: 8, cursor: "pointer", fontSize: 12, fontWeight: 600, whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 4 }}>
-              ☁ {gdriveConnected ? "Drive" : "Drive"}
-              <span style={{ width: 6, height: 6, borderRadius: "50%", background: gdriveConnected ? "#10b981" : "#475569", display: "inline-block" }} />
-            </button>
             <div style={{ display: "flex", alignItems: "center", gap: 5, padding: "4px 8px", background: "rgba(255,255,255,0.05)", borderRadius: 8 }}>
               <div style={{ width: 22, height: 22, borderRadius: "50%", background: "#3b82f6", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, color: "#fff", flexShrink: 0 }}>{initials(currentUser.name)}</div>
               <span style={{ fontSize: 11, color: "#94a3b8", maxWidth: 80, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{currentUser.name.split(" ")[0]}</span>
+              {/* Google Drive status button — inside user pill to save space */}
+              <button onClick={() => { setGdriveModal(true); setGdriveSyncMsg(""); }}
+                title="Google Drive Sync"
+                style={{ background: gdriveConnected ? "rgba(16,185,129,0.2)" : "rgba(255,255,255,0.08)", border: `1px solid ${gdriveConnected ? "rgba(16,185,129,0.4)" : "rgba(255,255,255,0.15)"}`, color: gdriveConnected ? "#10b981" : "#94a3b8", cursor: "pointer", fontSize: 11, fontWeight: 700, padding: "2px 7px", borderRadius: 5, whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 3 }}>
+                ☁<span style={{ width: 5, height: 5, borderRadius: "50%", background: gdriveConnected ? "#10b981" : "#475569", display: "inline-block" }} />
+              </button>
               <button onClick={() => { setF_oldpin(""); setF_newpin(""); setF_newpin2(""); setModal("changePin"); }} style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)", color: "#cbd5e1", cursor: "pointer", fontSize: 10, fontWeight: 600, padding: "2px 7px", borderRadius: 5, whiteSpace: "nowrap" }}>PIN</button>
               <button onClick={() => setCurrentUser(null)} style={{ background: "rgba(239,68,68,0.15)", border: "1px solid rgba(239,68,68,0.25)", color: "#f87171", cursor: "pointer", fontSize: 10, fontWeight: 600, padding: "2px 7px", borderRadius: 5, whiteSpace: "nowrap" }}>Sign Out</button>
             </div>
